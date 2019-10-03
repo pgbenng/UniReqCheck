@@ -9,6 +9,7 @@ ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={Home}></Route>
       <Route path='/nimda' component={Admin}></Route>
+     
       
     </Router>
 ), document.getElementById('app'));

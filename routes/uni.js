@@ -15,5 +15,17 @@ router.post('/req', (req, res, next) => {
     })
 })
 
+router.get('/req', (req, res, next)=>{
+    models.Uni.findOne({     
+        where:{
+            name: req.query.uniName
+
+        }
+    }).then(university=>{
+        console.log(university)
+        res.send(university)
+    })
+})
+
 
 module.exports = router;

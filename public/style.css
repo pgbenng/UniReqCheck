@@ -1,0 +1,20 @@
+.inputboxes{
+    text-align: center;
+    margin-top: 50px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+#admintitle {
+    margin-bottom: 100px;
+}
+
+#adminreq {
+    text-align: center;
+}
+
+#container{
+    text-align: center;
+}

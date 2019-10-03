@@ -15,6 +15,7 @@ console.log(Object.keys(models));
 
 
 var routes = require('./routes/index');
+var university = require('./routes/uni')
 
 
 var app = express();
@@ -34,6 +35,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', routes);
+app.use('/uni', university); 
 
 
 // catch 404 and forward to error handler

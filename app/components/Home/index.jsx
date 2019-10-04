@@ -40,12 +40,12 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div className = 'banner'>
-        <span id='admission'>
-            <img id='check'src='https://1001freedownloads.s3.amazonaws.com/vector/thumb/126084/thatsmyboy_Simple_Red_Checkmark.png'></img>
+      // <div class = 'banner'>
+      //   <span id='admission'>
+      //       <img id='check'src='https://1001freedownloads.s3.amazonaws.com/vector/thumb/126084/thatsmyboy_Simple_Red_Checkmark.png'></img>
           
-          <p1> ADMISSION </p1>
-          </span>
+          // <p1> ADMISSION </p1>
+          // </span>
         
       <div>
         <div>
@@ -55,7 +55,7 @@ export default class Home extends React.Component {
         <input type='text' onChange={this.handleUni.bind(this)}></input>
         </div>
        
-      </div>
+      {/* </div> */}
       <div> <ReactMarkdown source={this.state.req}/> </div>
       </div>
       

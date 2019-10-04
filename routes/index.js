@@ -5,7 +5,7 @@ router.get('/', (req, res, next) => {
     res.render('index')
 })
 
-router.get('/nimda', (req, res, next) => {
+router.get('/intellects', (req, res, next) => {
     res.render('index')
 })
 module.exports = router;

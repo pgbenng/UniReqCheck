@@ -12,6 +12,7 @@ router.post('/req', (req, res, next) => {
     })
     .then (result => {
         res.send(201)
+        
     })
 })
 

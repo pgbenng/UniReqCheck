@@ -4,11 +4,14 @@
 }
 
 body {
-    background-color: lightblue;
+    background-color: #9ACEE2;
 }
 
 #admintitle {
     margin-bottom: 100px;
+    font-family: 'Lora', serif;
+
+
 }
 
 #adminreq {

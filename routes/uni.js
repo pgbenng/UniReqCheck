@@ -16,14 +16,18 @@ router.post('/req', (req, res, next) => {
 })
 
 router.get('/req', (req, res, next)=>{
-    models.Uni.findOne({     
+    models.Uni.findAll({
+        limit: 1,
         where:{
             name: req.query.uniName
-
-        }
+        },
+        order: [ [ 'createdAt', 'DESC' ]]
     }).then(university=>{
-        console.log(university)
-        res.send(university)
+        if (university) { 
+            res.send(university[0]);
+        } else {
+            res.send("");
+        }
     })
 })
 

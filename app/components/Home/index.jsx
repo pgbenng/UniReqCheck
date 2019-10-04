@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'; 
+import ReactMarkdown from 'react-markdown';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -17,15 +18,9 @@ export default class Home extends React.Component {
   }
 
   handleUni(e){
-    this.setState({
-      uniName: e.target.value
-    })
-
-  }
-  handleUniLookup(){
     axios.get("/uni/req",{
       params:{
-        uniName: this.state.uniName
+        uniName: e.target.value
       }
 
     }).then(uni =>{
@@ -35,20 +30,35 @@ export default class Home extends React.Component {
       })
 
     })
+    
+  
 
   }
+  
   
 
 
   render() {
     return (
+      <div id = 'banner'>
+        <span id='admission'>
+            <img id='check'src='https://1001freedownloads.s3.amazonaws.com/vector/thumb/126084/thatsmyboy_Simple_Red_Checkmark.png'></img>
+          
+          <p1> ADMISSION </p1>
+          </span>
+        
       <div>
-      <div>
-        <input type='text' onChange={this.handleUni.bind(this)}></input>
-        <button onClick={this.handleUniLookup.bind(this)}>Search</button>
+        <div>
+          
+        </div>
+        <div>
+        {/* <input type='text' onChange={this.handleUni.bind(this)}></input> */}
+        </div>
+       
       </div>
-      <div> {this.state.req}</div>
+      <div> <ReactMarkdown source={this.state.req}/> </div>
       </div>
+      
     )
   }
 }

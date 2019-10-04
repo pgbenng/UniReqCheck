@@ -106,12 +106,9 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
        
       {/* </div> */}
       <div id="reqbody"> <ReactMarkdown source={this.state.req}/> </div>
-=======
->>>>>>> 7b066de052ee4eb17d8f4868a84befe1e8a4c6b3
       </div>
     );
   }

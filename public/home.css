@@ -1,0 +1,22 @@
+#banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://steemitimages.com/DQmZG5aepq9XPgwJg7rfZHJ9UEXmCYoApbJJgvkLCmff7oz/the-21-most-beautiful-university-campuses-in-the-uk.jpg");
+    opacity:0.7;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     height: 100%;
+} 
+#check{
+    height: 50px;
+    width: 50px;
+    
+}
+p1{
+    font-size: 30px;
+}
+#admission{
+    position: absolute;
+    top: - 300px;
+    
+}

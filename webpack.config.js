@@ -22,11 +22,14 @@ var APP_DIR = path.resolve(__dirname, 'app');
 // one that is running `npm run dev-react` and one that is running `npm start`
 var config = {
   entry: APP_DIR + '/components/index.jsx',
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [{
       test: /\.jsx$/,
       loader: 'babel',
-      include: APP_DIR,
+      exclude: /node_modules/,
       query: {
         presets: ['es2015', 'react']
       }
@@ -36,7 +39,11 @@ var config = {
         'style?sourceMap',
         'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
       ]
-    }]
+    },{
+      test: /\.json$/,
+      loader: 'json-loader'
+    }
+  ]
   },
   output: {
     path: BUILD_DIR,

@@ -6,7 +6,7 @@ export default class Admin extends React.Component {
     super(props);
     this.state = {
       uniName: "",
-      req: "",
+      req: ""
     };
   }
 
@@ -32,14 +32,14 @@ export default class Admin extends React.Component {
       })
       .then(res => {
         console.log(res);
-        alert('submitted')
+        alert("submitted");
       });
   }
   render() {
     return (
-      <div id='container'>
+      <div id="container">
         <div className="row">
-          <div className="col-md-12 inputboxes" >
+          <div className="col-md-12 inputboxes">
             <h1 id="admintitle"> Post-Secondary Requirements Admin Page</h1>
             <input
               id="uniname"
@@ -47,21 +47,18 @@ export default class Admin extends React.Component {
               onChange={this.handleAddUniName.bind(this)}
               placeholder="Uni name"
             ></input>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
+          </div>
+          <div className="row">
+            <div className="col-md-12">
               <textarea
-              
-              onChange={this.handleAddReq.bind(this)}
-              placeholder="Add reqs"
-              rows="10"
-              cols="100"
-              
-            ></textarea>
-              </div>
+                onChange={this.handleAddReq.bind(this)}
+                placeholder="Add reqs"
+                rows="10"
+                cols="100"
+              ></textarea>
             </div>
-            <button onClick={this.handleSubmitReq.bind(this)}> Submit</button>
-          
+          </div>
+          <button onClick={this.handleSubmitReq.bind(this)}> Submit</button>
         </div>
       </div>
     );

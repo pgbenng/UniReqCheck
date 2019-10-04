@@ -9,6 +9,7 @@ ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={Home}></Route>
       <Route path='/intellects' component={Admin}></Route>
+      
      
       
     </Router>

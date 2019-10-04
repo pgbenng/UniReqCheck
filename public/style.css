@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #9ACEE2;
+    background-color: white;
 }
 
 #admintitle {
@@ -20,4 +20,26 @@ body {
 
 #container{
     text-align: center;
+}
+
+#reqbody {
+    margin-left: 12px;
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding-bottom: 0.3em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 40px;
+}
+
+h4 {
+    margin-top: 30px;
+}
+p {
+    margin-bottom: 10px;
 }

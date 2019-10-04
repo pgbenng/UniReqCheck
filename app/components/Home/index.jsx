@@ -40,7 +40,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div id = 'banner'>
+      <div className = 'banner'>
         <span id='admission'>
             <img id='check'src='https://1001freedownloads.s3.amazonaws.com/vector/thumb/126084/thatsmyboy_Simple_Red_Checkmark.png'></img>
           
@@ -52,7 +52,7 @@ export default class Home extends React.Component {
           
         </div>
         <div>
-        {/* <input type='text' onChange={this.handleUni.bind(this)}></input> */}
+        <input type='text' onChange={this.handleUni.bind(this)}></input>
         </div>
        
       </div>

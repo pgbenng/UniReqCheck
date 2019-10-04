@@ -1,5 +1,9 @@
-#banner{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://steemitimages.com/DQmZG5aepq9XPgwJg7rfZHJ9UEXmCYoApbJJgvkLCmff7oz/the-21-most-beautiful-university-campuses-in-the-uk.jpg");
+body, html {
+    height: 100%;
+  }
+
+.banner{
+    background-image: url("https://steemitimages.com/DQmZG5aepq9XPgwJg7rfZHJ9UEXmCYoApbJJgvkLCmff7oz/the-21-most-beautiful-university-campuses-in-the-uk.jpg");
     opacity:0.7;
    
     background-position: center;

@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    
   }
 
 #banner{
@@ -29,7 +30,77 @@ p1{
 }
 #admission{
     position: relative;
-    left: 10px;
-    bottom: -250px;
+    left: -10px;
+    bottom: -200px;
    
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .wow {
+    font-family: 'Oswald', sans-serif;
+      position:relative;
+      left:-200px;
+      top:-100px;
+
+    background-image:url('https://www.sccpre.cat/mypng/full/245-2456706_free-download-silhouette.png');
+    width:3000px;
+    height: 625px;
+    background-repeat: no-repeat
+  
+}
+h300 {
+    font-size: 100px;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    color: gray;
+    position: relative;
+    top:-600px;
+
+
+}
+p3 {
+    font-size: 20px;
+    color: gray;
+    position: relative;
+    top:-600px;
+}
+
+.under {
+    
+    position:relative;
+    left:-200px;
+    top:300px;
+    background-image: url('https://res.cloudinary.com/gaplabs/image/upload/c_fill,g_faces:auto,fl_progressive/v1/images/header-tiled-background.png');
+    width:3000px;
+    height: 625px;
+    z-index:-1;
+
+}
+.requ{
+   
+    color:black
+}
+   
+  
+
+
+
+

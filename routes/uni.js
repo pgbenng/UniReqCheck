@@ -12,10 +12,24 @@ router.post('/req', (req, res, next) => {
     })
     .then (result => {
         res.send(201)
-        
     })
 })
 
+router.get('/reqSearch', (req, res, next)=>{
+    models.Uni.findAll({
+        limit: 1,
+        where:{
+            name: req.query.uniName
+        },
+        order: [ [ 'createdAt', 'DESC' ]]
+    }).then(university=>{
+        if (university) { 
+            res.send(university[0])
+        } else {
+            res.send('')
+        }
+    })
+})
 router.get('/req', (req, res, next)=>{
     models.Uni.findAll({
         
@@ -29,6 +43,7 @@ router.get('/req', (req, res, next)=>{
         }
     })
 })
+
 
 
 module.exports = router;

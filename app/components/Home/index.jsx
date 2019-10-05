@@ -43,7 +43,7 @@ export default class Home extends React.Component {
         <div className="row">
           <div className="col-md-12">
             <nav className="navbar navbar-default">
-              <a class="navbar-brand" href="/universities">Uni Requirements</a>
+              <a class="navbar-brand" href="/universities">List of Universities</a>
               <div
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
@@ -68,7 +68,7 @@ export default class Home extends React.Component {
                       {this.state.allPossibleUniversities.map(x => {
                         return (
                           <div>
-                            <a className="dropdown-item" href="/universities">
+                            <a className="dropdown-item" href="#">
                               {x.name}
                             </a>
                             <div className="dropdown-divider"></div>

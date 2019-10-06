@@ -33,12 +33,28 @@ export default class Home extends React.Component {
       })
       .then(uni => {
         console.log(uni, "line 19")
+        
         this.setState({
-          req: uni.data.req
+          req: uni.data.req,
+          
+       
         })
        
       });
   }
+  handleUniSubmit(e){
+    axios
+    .get("/uni/reqSearch", {
+      params: {
+        uniName: e.target.value
+      }
+    })
+
+    .then((res)=>{
+      window.location = '/universities'
+  })
+}
+  
 
   render() {
     return (
@@ -88,6 +104,7 @@ export default class Home extends React.Component {
                 type="text"
                
               onChange = {this.handleUni.bind(this)}></input>
+              <button type= 'submit' onClick = {this.handleUniSubmit.bind(this)}>Search</button>
             </form>
           </div>
         </nav>
@@ -119,14 +136,7 @@ export default class Home extends React.Component {
         <div >
           <p3>
             Look up Universities you want to go to! Dont be sad if u dont meet the Requirements!
-            <div className="col-md-12 requ">
-              <div className="row">
-            <div>
-              {" "}
-              <ReactMarkdown source={this.state.req} />{" "}
-            </div>
-            </div>
-        </div>
+            
           </p3>
           
           </div>

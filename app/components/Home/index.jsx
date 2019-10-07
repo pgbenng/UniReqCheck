@@ -51,6 +51,7 @@ export default class Home extends React.Component {
     })
 
     .then((res)=>{
+      
       window.location = '/universities'
   })
 }
@@ -86,9 +87,10 @@ export default class Home extends React.Component {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {this.state.allPossibleUniversities.map(x => {
+                   
                     return (
                       <div>
-                        <a className="dropdown-item" href="/universities">
+                        <a className="dropdown-item" href={"/universities/" + x.name }>
                           {x.name}
                         </a>
                         <div className="dropdown-divider"></div>

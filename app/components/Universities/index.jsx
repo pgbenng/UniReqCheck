@@ -6,18 +6,36 @@ export default class Universities extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
+        req : ""
         
       };
     }
 
-    componentDidMount() {}
+    componentDidMount() {
+      axios.get("/uni/reqSearch",{
+        params:{
+          uniName : this.props.params.uniName
+        }
+      }).then(res=>{
+        this.setState({
+          req: res.data.req
+        })
+      })
+
+    }
 
     
     render() {
         return (
+          <div>
         <div>
             Hello world
         </div>
+        <div>
+          <ReactMarkdown source = {this.state.req}/>
+        </div>
+        </div>
+
         )}
 }
 

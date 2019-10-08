@@ -5,6 +5,7 @@
 
 body {
     background-color: white;
+    
 }
 
 #admintitle {
@@ -21,6 +22,10 @@ body {
 
 #container{
     text-align: center;
+}
+
+#container1{
+    text-align: left;
 }
 
 #reqbody {

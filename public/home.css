@@ -146,3 +146,12 @@ p3 {
   border-radius:6px 0 6px 6px;
 }
 
+a, u {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar a:hover { background-color: rgb(184, 175, 175) ; }

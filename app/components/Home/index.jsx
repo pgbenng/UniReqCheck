@@ -1,13 +1,11 @@
 import React from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-import Navbar from "../Navbar/index.jsx"
+import Navbar from "../Navbar/index.jsx";
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      uniName: "",
-      req: "",
       allPossibleUniversities: []
     };
   }
@@ -16,51 +14,15 @@ export default class Home extends React.Component {
     axios.get("/uni/req", {}).then(univ => {
       console.log(univ);
       this.setState({
-        allPossibleUniversities: univ.data,
-        req: ''
-       
+        allPossibleUniversities: univ.data
       });
     });
   }
 
-
-  handleUni(e) {
-    axios
-      .get("/uni/reqSearch", {
-        params: {
-          uniName: e.target.value
-        }
-      })
-      .then(uni => {
-        console.log(uni, "line 19")
-        
-        this.setState({
-          req: uni.data.req,
-          
-       
-        })
-       
-      });
-  }
-  handleUniSubmit(e){
-    axios
-    .get("/uni/reqSearch", {
-      params: {
-        uniName: e.target.value
-      }
-    })
-
-    .then((res)=>{
-      
-      window.location = "/universities/"
-  })
-}
-  
-
   render() {
     return (
       <div id="container">
-        <Navbar/>
+        <Navbar backgroundcolor='white' textcolor='black'/>
         <div className="row">
           <div className="col-md-12">
             <div id="banner">
@@ -75,41 +37,20 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-
-
-
-        {/* </div> */}
-       
-        <div className = 'wow'>
+        <div className="wow"></div>
+        <div>
+          <h300> Admission Requirements </h300>
         </div>
         <div>
-        <h300> Admission Requirements </h300>
-
-        </div>
-        <div >
           <p3>
-            Look up Universities you want to go to! Dont be sad if u dont meet the Requirements!
-            
+            Look up Universities you want to go to! Dont be sad if u dont meet
+            the Requirements!
           </p3>
-          
-          </div>
-        
-          
-          
-          
-        
-       
-        
-       
-
-        <div className = 'under'>
-          <div>
-            Canadian Universities
-          </div>
-
+        </div>
+        <div className="under">
+          <div>Canadian Universities</div>
         </div>
       </div>
-   
     );
   }
 }

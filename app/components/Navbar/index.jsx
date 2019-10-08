@@ -28,16 +28,18 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
+        <div style={{backgroundColor:this.props.backgroundcolor, color:this.props.textcolor}}>
     
         <nav className="navbar">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/" style={{color:this.props.textcolor}}>
             Uni Req Check
           </a>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto ul">
               <li className="nav-item active li">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/" style={{color:this.props.textcolor}}>
+                    
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
@@ -51,6 +53,7 @@ export default class Navbar extends React.Component {
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
+                  style={{color:this.props.textcolor}}
                 >
                   Universities
                 </a>
@@ -59,13 +62,13 @@ export default class Navbar extends React.Component {
                    console.log(x);
                     return (
                       <div className="dropdown-submenu">
-                      <a>{x.name}</a>
+                      <a style={{color:this.props.textcolor}}>{x.name}</a>
                       <div className="dropdown-menu">
                         <div>
                           {x.Faculties.map(y=>{
                             return(
                               <div>
-                              <a href= {"/universities/" + x.name + "/" + y.name}>
+                              <a href= {"/universities/" + x.name + "/" + y.name}  style={{color:this.props.textcolor}}>
                                 {y.name}
                               </a>
                               </div>
@@ -83,6 +86,7 @@ export default class Navbar extends React.Component {
           
           </div>
         </nav>
+        </div>
         
    
     );

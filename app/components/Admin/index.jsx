@@ -6,7 +6,8 @@ export default class Admin extends React.Component {
     super(props);
     this.state = {
       uniName: "",
-      req: ""
+      req: "",
+      faculty: ""
     };
   }
 
@@ -23,12 +24,19 @@ export default class Admin extends React.Component {
       req: e.target.value
     });
   }
+  handleAddFaculty(e){
+    this.setState({
+      faculty: e.target.value
+    })
+
+  }
 
   handleSubmitReq() {
     axios
       .post("/uni/req", {
         uniName: this.state.uniName,
-        req: this.state.req
+        req: this.state.req,
+        faculty: this.state.faculty
       })
       .then(res => {
         console.log(res);
@@ -46,6 +54,14 @@ export default class Admin extends React.Component {
               type="text"
               onChange={this.handleAddUniName.bind(this)}
               placeholder="Uni name"
+            ></input>
+          </div>
+          <div>
+          <input
+              id="faculty"
+              type="text"
+              onChange={this.handleAddFaculty.bind(this)}
+              placeholder="Faculty"
             ></input>
           </div>
           <div className="row">

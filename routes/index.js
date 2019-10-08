@@ -9,7 +9,7 @@ router.get('/intellects', (req, res, next) => {
     res.render('index')
 })
 
-router.get('/universities/:uniName', (req, res, next) => {
+router.get('/universities/:uniName/:faculty', (req, res, next) => {
     res.render('index')
 })
 module.exports = router;

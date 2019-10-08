@@ -8,17 +8,20 @@ export default class Universities extends React.Component {
       this.state = {
         req : ""
         
+        
       };
     }
 
     componentDidMount() {
       axios.get("/uni/reqSearch",{
         params:{
-          uniName : this.props.params.uniName
+          uniName : this.props.params.uniName,
+          faculty : this.props.params.faculty
         }
       }).then(res=>{
+        console.log(res.data)
         this.setState({
-          req: res.data.req
+          req: res.data.reqs
         })
       })
 

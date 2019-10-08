@@ -87,14 +87,24 @@ export default class Home extends React.Component {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {this.state.allPossibleUniversities.map(x => {
-                   
+                   console.log(x);
                     return (
-                      <div>
-                        <a className="dropdown-item" href={"/universities/" + x.name }>
-                          {x.name}
-                        </a>
-                        <div className="dropdown-divider"></div>
+                      <div className="dropdown-submenu">
+                      <a>{x.name}</a>
+                      <div className="dropdown-menu">
+                        <div>
+                          {x.Faculties.map(y=>{
+                            return(
+                              <div>
+                              <a href= {"/universities/" + x.name + "/" + y.name}>
+                                {y.name}
+                              </a>
+                              </div>
+                            )
+                          })}
+                        </div>
                       </div>
+                    </div>
                     );
                   })}
                 </div>

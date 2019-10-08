@@ -5,33 +5,57 @@ const models = require("../models");
 router.post('/req', (req, res, next) => {
     const uni = req.body.uniName
     const requirement = req.body.req 
+    const faculty = req.body.faculty
 
-    models.Uni.create({
-        name: uni,
-        req: requirement
+    console.log(uni, requirement, faculty)
+
+    models.University.findOrCreate({
+        where: {
+            name: uni,
+        }
     })
-    .then (result => {
-        res.send(201)
+    .then(result => {
+        result = result[0];
+        models.Faculty.create({
+            name: faculty,
+            reqs: requirement,
+            uniId: result.dataValues.id
+        })
+        .then(uni=>{
+            res.send(201)
+        })
     })
 })
 
 router.get('/reqSearch', (req, res, next)=>{
-    models.Uni.findAll({
+    models.University.findAll({
         limit: 1,
         where:{
-            name: req.query.uniName
+            name: req.query.uniName,
+            
+        },
+        include:{
+            model:models.Faculty,
+            where:{
+                name: req.query.faculty
+            }
         },
         order: [ [ 'createdAt', 'DESC' ]]
     }).then(university=>{
+        console.log(university)
         if (university) { 
-            res.send(university[0])
+            res.send(university[0].dataValues.Faculties[0])
         } else {
             res.send('')
         }
     })
 })
 router.get('/req', (req, res, next)=>{
-    models.Uni.findAll({
+    models.University.findAll({
+        include:{
+            model:models.Faculty,
+            
+        },
         
     
         order: [ [ 'createdAt', 'DESC' ]]

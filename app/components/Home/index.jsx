@@ -66,15 +66,15 @@ export default class Home extends React.Component {
           </a>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
+            <ul className="navbar-nav mr-auto ul">
+              <li className="nav-item active li">
                 <a className="nav-link" href="#">
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
 
-              <li className="nav-item dropdown">
-                <a
+              <li className="nav-item dropdown li">
+                <a className="a"
                   className="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdown"

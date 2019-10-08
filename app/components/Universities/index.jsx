@@ -30,14 +30,13 @@ export default class Universities extends React.Component {
     
     render() {
         return (
-          <div>
-        <div>
-            Hello world
+          
+        <div id= "reqbody">
+          
+           <ReactMarkdown source = {this.state.req}/>
         </div>
-        <div>
-          <ReactMarkdown source = {this.state.req}/>
-        </div>
-        </div>
+        
+        
 
         )}
 }

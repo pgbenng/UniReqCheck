@@ -28,9 +28,9 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-        <div style={{backgroundColor:this.props.backgroundcolor, color:this.props.textcolor}}>
+        <div className= 'sticky' style={{backgroundColor:this.props.backgroundcolor, color:this.props.textcolor}}>
     
-        <nav className="navbar navbar-fixed-top">
+        <nav className="navbar">
           <a className="navbar-brand" href="/" style={{color:this.props.textcolor}}>
             Uni Req Check
           </a>

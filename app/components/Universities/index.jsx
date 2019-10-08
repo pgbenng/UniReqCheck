@@ -32,7 +32,7 @@ export default class Universities extends React.Component {
     render() {
         return (
           
-        <div>
+        <div className = 'univer'>
           <Navbar backgroundcolor= 'black' textcolor='white'/>
           <div id="reqbody">
            <ReactMarkdown source = {this.state.req}/>

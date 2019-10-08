@@ -29,7 +29,7 @@ export default class Home extends React.Component {
       <div id="container">
         <Navbar backgroundcolor='white' textcolor='black'/>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 univer">
             <div id="banner">
               <span id="admission">
                 <img

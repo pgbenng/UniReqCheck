@@ -52,7 +52,7 @@ export default class Home extends React.Component {
 
     .then((res)=>{
       
-      window.location = '/universities'
+      window.location = "/universities/"
   })
 }
   
@@ -110,14 +110,15 @@ export default class Home extends React.Component {
                 </div>
               </li>
             </ul>
-            <form className="form-inline my-2 my-lg-0">
+{/*             
+            <form className="form-inline my-2 my-lg-0 click">
               <input
               
                 type="text"
                
               onChange = {this.handleUni.bind(this)}></input>
               <button type= 'submit' onClick = {this.handleUniSubmit.bind(this)}>Search</button>
-            </form>
+            </form> */}
           </div>
         </nav>
         <div className="row">

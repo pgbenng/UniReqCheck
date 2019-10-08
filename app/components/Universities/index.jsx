@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
+import Navbar from "../Navbar/index.jsx";
 
 export default class Universities extends React.Component {
     constructor(props) {
@@ -32,6 +33,7 @@ export default class Universities extends React.Component {
         return (
           
         <div id= "reqbody">
+          <Navbar/>
           
            <ReactMarkdown source = {this.state.req}/>
         </div>

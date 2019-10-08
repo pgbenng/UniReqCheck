@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-
+import Navbar from "../Navbar/index.jsx"
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -60,67 +60,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div id="container">
-        <nav className="navbar">
-          <a className="navbar-brand" href="#">
-            Uni Req Check
-          </a>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto ul">
-              <li className="nav-item active li">
-                <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
-              </li>
-
-              <li className="nav-item dropdown li">
-                <a className="a"
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Universities
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {this.state.allPossibleUniversities.map(x => {
-                   console.log(x);
-                    return (
-                      <div className="dropdown-submenu">
-                      <a>{x.name}</a>
-                      <div className="dropdown-menu">
-                        <div>
-                          {x.Faculties.map(y=>{
-                            return(
-                              <div>
-                              <a href= {"/universities/" + x.name + "/" + y.name}>
-                                {y.name}
-                              </a>
-                              </div>
-                            )
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                    );
-                  })}
-                </div>
-              </li>
-            </ul>
-{/*             
-            <form className="form-inline my-2 my-lg-0 click">
-              <input
-              
-                type="text"
-               
-              onChange = {this.handleUni.bind(this)}></input>
-              <button type= 'submit' onClick = {this.handleUniSubmit.bind(this)}>Search</button>
-            </form> */}
-          </div>
-        </nav>
+        <Navbar/>
         <div className="row">
           <div className="col-md-12">
             <div id="banner">

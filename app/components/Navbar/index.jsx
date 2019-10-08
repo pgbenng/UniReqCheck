@@ -30,10 +30,11 @@ export default class Navbar extends React.Component {
     return (
         <div style={{backgroundColor:this.props.backgroundcolor, color:this.props.textcolor}}>
     
-        <nav className="navbar">
+        <nav className="navbar navbar-fixed-top">
           <a className="navbar-brand" href="/" style={{color:this.props.textcolor}}>
             Uni Req Check
           </a>
+          <div className = 'container-fluid'>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto ul">
@@ -84,6 +85,7 @@ export default class Navbar extends React.Component {
             </ul>
             
           
+          </div>
           </div>
         </nav>
         </div>

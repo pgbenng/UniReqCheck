@@ -17,7 +17,12 @@ export default class Home extends React.Component {
         allPossibleUniversities: univ.data
       });
     });
+   
   }
+  
+
+
+
 
   render() {
     return (

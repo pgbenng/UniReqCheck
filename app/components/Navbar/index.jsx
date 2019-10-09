@@ -34,6 +34,8 @@ export default class Navbar extends React.Component {
           <a className="navbar-brand" href="/" style={{color:this.props.textcolor}}>
             Uni Req Check
           </a>
+          <button className = 'navbar-toggle' data-toggle = 'collapse' data-target = '.navHeaderCollapse'></button>
+          <div className = 'collapse navber-collapsenavHeaderCollapse'></div>
           <div >
 
           <div id="navbarSupportedContent">

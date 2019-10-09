@@ -191,6 +191,9 @@ a:hover {
 .navbar {
   z-index:1
 }
+li:hover {
+  cursor: wait;
+}
 
 
 

@@ -17,17 +17,12 @@ export default class Home extends React.Component {
         allPossibleUniversities: univ.data
       });
     });
-   
   }
-  
-
-
-
 
   render() {
     return (
       <div id="container">
-        <Navbar backgroundcolor='white' textcolor='black'/>
+        <Navbar backgroundcolor="white" textcolor="black" />
         <div className="row">
           <div className="col-md-12 univer">
             <div id="banner">
@@ -37,23 +32,28 @@ export default class Home extends React.Component {
                   src="https://cdn.pixabay.com/photo/2014/04/02/10/19/check-303494_640.png"
                 ></img>
 
-                <p1> ADMISSIONS </p1>
+                <p1 className="admissions-logo"> ADMISSIONS </p1>
               </span>
             </div>
           </div>
         </div>
-        <div className="wow"></div>
-        <div>
-          <h300> Admission Requirements </h300>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="wow"></div>
+          </div>
         </div>
-        <div>
-          <p3>
-            Look up Universities you want to go to! Dont be sad if u dont meet
-            the Requirements!
-          </p3>
+        <div className="row">
+          <div className="col-md-12">
+            <h300> Admission Requirements </h300>
+          </div>
         </div>
-        <div className="under">
-          <div>Canadian Universities</div>
+        <div className="row">
+          <div className="col-md-12">
+            <p3>
+              Look up Universities you want to go to! Dont be sad if u dont meet
+              the Requirements!
+            </p3>
+          </div>
         </div>
       </div>
     );

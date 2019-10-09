@@ -182,6 +182,7 @@ a:hover {
   width: 100%;
   
   text-align: center;
+  height:50px;
 }
 .univer {
   margin-top: 80px;
@@ -190,11 +191,7 @@ a:hover {
 .navbar {
   z-index:1
 }
-.navbar-wrapper {
-  position:absolute;
-  right:0;
-  left:0;
-}
+
 
 
 

@@ -27,6 +27,8 @@ router.post('/req', (req, res, next) => {
     })
 })
 
+
+
 router.get('/reqSearch', (req, res, next)=>{
     models.University.findAll({
         limit: 1,

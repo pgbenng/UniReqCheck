@@ -34,7 +34,7 @@ export default class Navbar extends React.Component {
           <a className="navbar-brand" href="/" style={{color:this.props.textcolor}}>
             Uni Req Check
           </a>
-          <div className = 'container-fluid'>
+          <div >
 
           <div id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto ul">

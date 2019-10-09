@@ -1,5 +1,8 @@
 
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 #container {
     height: 100%;
     
@@ -15,12 +18,26 @@ background-position: center;
   background-size: cover;
   position: relative;
   height:500px;
+  z-index:-1;
+  
 } 
+.under {
+    
+  position:relative;
+  left:-200px;
+  top:-400px;
+  background-image: url('https://res.cloudinary.com/gaplabs/image/upload/c_fill,g_faces:auto,fl_progressive/v1/images/header-tiled-background.png');
+  width:3000px;
+  height: 625px;
+  z-index:-1;
+
+}
 #check{
     height: 80px;
     width: 80px;
     position: relative;
     top:-30px;
+    z-index:-1;
     
     
 }
@@ -35,6 +52,7 @@ p1{
     position: relative;
     left: -10px;
     bottom: -200px;
+    z-index:-1;
    
 }
 
@@ -93,17 +111,7 @@ p3 {
     top:-600px;
 }
 
-.under {
-    
-    position:relative;
-    left:-200px;
-    top:-400px;
-    background-image: url('https://res.cloudinary.com/gaplabs/image/upload/c_fill,g_faces:auto,fl_progressive/v1/images/header-tiled-background.png');
-    width:3000px;
-    height: 625px;
-    z-index:-1;
 
-}
 .requ{
    
     color:black
@@ -113,6 +121,8 @@ p3 {
 
 .dropdown-submenu {
   position:relative;
+  background-color:#fad2da
+
 
 }
 
@@ -124,9 +134,14 @@ p3 {
   -webkit-border-radius:0 6px 6px 6px;
   -moz-border-radius:0 6px 6px 6px;
   border-radius:0 6px 6px 6px;
+background-color:#fad2da
 }
 .dropdown-submenu:hover>.dropdown-menu {
   display:block;
+  background-color: rgb(170, 226, 245)
+
+ 
+
 }
 
 .dropdown-submenu>a:after {
@@ -141,12 +156,15 @@ p3 {
   border-left-color:#cccccc;
   margin-top:5px;
   margin-right:-10px;
+ 
+  
 }
 .dropdown-submenu:hover>a:after {
   border-left-color:#ffffff;
 }
 .dropdown-submenu.pull-left {
   float:none;
+ background-color:rgb(170, 226, 245)
 }
 .dropdown-submenu.pull-left>.dropdown-menu {
   left:-100%;
@@ -154,6 +172,7 @@ p3 {
   -webkit-border-radius:6px 0 6px 6px;
   -moz-border-radius:6px 0 6px 6px;
   border-radius:6px 0 6px 6px;
+  background-color:rgb(170, 226, 245)
 }
 
 a, u {
@@ -173,10 +192,19 @@ a:hover {
   width: 100%;
   
   text-align: center;
+  height:50px;
 }
 .univer {
   margin-top: 80px;
+  z-index: -1;
 }
+.navbar {
+  z-index:1
+}
+li:hover {
+  cursor: pointer;
+}
+
 
 
 

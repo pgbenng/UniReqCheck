@@ -6,7 +6,7 @@ export default class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      aboutBody: ""
     
     };
   }
@@ -16,7 +16,12 @@ export default class About extends React.Component {
 
   }
 
-
+  handleAddBody(e) {
+    this.setState({
+      aboutBody: e.target.value
+    })
+      
+ }
  
   
 
@@ -25,7 +30,6 @@ export default class About extends React.Component {
       
     <div id = 'about'>
 
-    Its actually not a about us it is a about me because Kevin Park did literally everything and ben did nothing
     </div>
     
     

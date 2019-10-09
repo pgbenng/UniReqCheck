@@ -12,4 +12,8 @@ router.get('/intellects', (req, res, next) => {
 router.get('/universities/:uniName/:faculty', (req, res, next) => {
     res.render('index')
 })
+
+router.get('/about-us',(req, res, next) =>{
+    res.render('index')
+})
 module.exports = router;

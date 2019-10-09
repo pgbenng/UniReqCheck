@@ -111,7 +111,7 @@ p3 {
 
 .dropdown-submenu {
   position:relative;
- 
+  background-color:rgb(23, 179, 231)
 
 
 }
@@ -124,9 +124,14 @@ p3 {
   -webkit-border-radius:0 6px 6px 6px;
   -moz-border-radius:0 6px 6px 6px;
   border-radius:0 6px 6px 6px;
+background-color:rgb(23, 179, 231)
 }
 .dropdown-submenu:hover>.dropdown-menu {
   display:block;
+  background-color: rgb(170, 226, 245)
+
+ 
+
 }
 
 .dropdown-submenu>a:after {
@@ -141,12 +146,15 @@ p3 {
   border-left-color:#cccccc;
   margin-top:5px;
   margin-right:-10px;
+ 
+  
 }
 .dropdown-submenu:hover>a:after {
   border-left-color:#ffffff;
 }
 .dropdown-submenu.pull-left {
   float:none;
+ background-color:rgb(170, 226, 245)
 }
 .dropdown-submenu.pull-left>.dropdown-menu {
   left:-100%;
@@ -154,6 +162,7 @@ p3 {
   -webkit-border-radius:6px 0 6px 6px;
   -moz-border-radius:6px 0 6px 6px;
   border-radius:6px 0 6px 6px;
+  background-color:rgb(170, 226, 245)
 }
 
 a, u {

@@ -18,11 +18,23 @@ background-position: center;
   z-index:-1;
   
 } 
+.under {
+    
+  position:relative;
+  left:-200px;
+  top:-400px;
+  background-image: url('https://res.cloudinary.com/gaplabs/image/upload/c_fill,g_faces:auto,fl_progressive/v1/images/header-tiled-background.png');
+  width:3000px;
+  height: 625px;
+  z-index:-1;
+
+}
 #check{
     height: 80px;
     width: 80px;
     position: relative;
     top:-30px;
+    z-index:-1;
     
     
 }
@@ -37,6 +49,7 @@ p1{
     position: relative;
     left: -10px;
     bottom: -200px;
+    z-index:-1;
    
 }
 
@@ -88,17 +101,7 @@ p3 {
     top:-600px;
 }
 
-.under {
-    
-    position:relative;
-    left:-200px;
-    top:-400px;
-    background-image: url('https://res.cloudinary.com/gaplabs/image/upload/c_fill,g_faces:auto,fl_progressive/v1/images/header-tiled-background.png');
-    width:3000px;
-    height: 625px;
-    z-index:-1;
 
-}
 .requ{
    
     color:black
@@ -108,6 +111,8 @@ p3 {
 
 .dropdown-submenu {
   position:relative;
+ 
+
 
 }
 
@@ -171,9 +176,15 @@ a:hover {
 }
 .univer {
   margin-top: 80px;
+  z-index: -1;
 }
 .navbar {
   z-index:1
+}
+.navbar-wrapper {
+  position:absolute;
+  right:0;
+  left:0;
 }
 
 

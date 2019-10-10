@@ -5,7 +5,7 @@ router.get('/', (req, res, next) => {
     res.render('index')
 })
 
-router.get('/intellects', (req, res, next) => {
+router.get('/benisdumb', (req, res, next) => {
     res.render('index')
 })
 

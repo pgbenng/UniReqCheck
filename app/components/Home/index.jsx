@@ -52,7 +52,7 @@ export default class Home extends React.Component {
         </div>
         <div className="row">
           <div className="col-md-12">
-            <h300> Admission Requirements </h300>
+            {/* <h300> Admission Requirements </h300> */}
           </div>
         </div>
         <br></br>

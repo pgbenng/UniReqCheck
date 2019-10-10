@@ -29,7 +29,7 @@ export default class Universities extends React.Component {
 
   render() {
     return (
-      <div className="univer row">
+      <div className="univer row reqs">
         <div className="col-md-12"></div>
         <Navbar backgroundcolor="black" textcolor="white" />
         <div id="reqbody" className="row">

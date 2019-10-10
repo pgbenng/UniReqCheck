@@ -19,17 +19,13 @@ export default class Home extends React.Component {
       });
     });
 
-    axios.get("/uni/about-us-submit", {
-      
-
-      }).then(res=> {
-        console.log(res)
-        this.setState({
-          aboutUsBody: res.data
-        })
-      })
+    axios.get("/uni/about-us-submit", {}).then(res => {
+      console.log(res);
+      this.setState({
+        aboutUsBody: res.data
+      });
+    });
   }
-  
 
   render() {
     return (
@@ -59,21 +55,18 @@ export default class Home extends React.Component {
             <h300> Admission Requirements </h300>
           </div>
         </div>
-        <br>
-        </br>
+        <br></br>
         <br></br>
         <div className="row">
           <div className="col-md-12">
             <p3>
-              "What I learned in university was how little I know."
+              "What I learned in university was how little I know." - Malcolm
+              Watts
             </p3>
-            <p3> - Malcolm Watts</p3>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12 aboutus">
-            {this.state.aboutUsBody}
-          </div>
+          <div className="col-md-12">{this.state.aboutUsBody}</div>
         </div>
       </div>
     );

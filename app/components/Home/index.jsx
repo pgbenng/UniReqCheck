@@ -59,12 +59,15 @@ export default class Home extends React.Component {
             <h300> Admission Requirements </h300>
           </div>
         </div>
+        <br>
+        </br>
+        <br></br>
         <div className="row">
           <div className="col-md-12">
             <p3>
-              Look up Universities you want to go to! Dont be sad if u dont meet
-              the Requirements!
+              "What I learned in university was how little I know."
             </p3>
+            <p3> - Malcolm Watts</p3>
           </div>
         </div>
         <div className="row">

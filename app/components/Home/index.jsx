@@ -6,7 +6,8 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allPossibleUniversities: []
+      allPossibleUniversities: [],
+      aboutUsBody: ""
     };
   }
 
@@ -17,7 +18,18 @@ export default class Home extends React.Component {
         allPossibleUniversities: univ.data
       });
     });
+
+    axios.get("/uni/about-us-submit", {
+      
+
+      }).then(res=> {
+        console.log(res)
+        this.setState({
+          aboutUsBody: res.data
+        })
+      })
   }
+  
 
   render() {
     return (
@@ -53,6 +65,11 @@ export default class Home extends React.Component {
               Look up Universities you want to go to! Dont be sad if u dont meet
               the Requirements!
             </p3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12 aboutus">
+            {this.state.aboutUsBody}
           </div>
         </div>
       </div>

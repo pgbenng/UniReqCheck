@@ -69,7 +69,7 @@ export default class Admin extends React.Component {
               <textarea
                 onChange={this.handleAddReq.bind(this)}
                 placeholder="Add reqs"
-                rows="10"
+                rows="20"
                 cols="100"
               ></textarea>
             </div>

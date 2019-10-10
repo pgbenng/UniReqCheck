@@ -27,6 +27,27 @@ router.post('/req', (req, res, next) => {
     })
 })
 
+router.post('/about-us-submit', (req, res, next) => {
+    const bodyText = req.body.aboutBody;
+
+    models.AboutUs.create({
+        text: bodyText
+    })
+    .then(result=> {
+        res.send(201)
+    })
+
+})
+
+router.get('/about-us-submit', (req, res, next) => {
+    models.AboutUs.findAll({
+        limit: 1,
+        order: [ [ 'createdAt', 'DESC' ]]
+    })
+    .then (result => {
+        res.send(result[0].text)
+    })
+})
 
 
 router.get('/reqSearch', (req, res, next)=>{

@@ -29,7 +29,9 @@ body {
     text-align: center;
 }
 
-
+.aboutus {
+    margin: 50px;
+}
 
 #reqbody {
     margin-left: 14px;

@@ -47,8 +47,9 @@ h1 {
     
 }
 
-li {
-    margin-right: 40px;
+.reqs {
+    margin-left: 20px;
+    margin-right: 35px;
 }
 h3 {
     margin-top: 45px;

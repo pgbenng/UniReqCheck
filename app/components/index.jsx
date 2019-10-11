@@ -5,6 +5,7 @@ import Home from './Home/index.jsx';
 import Admin from './Admin/index.jsx'
 import Universities from './Universities/index.jsx'
 import About from './About/index.jsx'
+import FeeCalculator from './FeeCalculator/index.jsx'
 
 ReactDOM.render((
     <Router history={browserHistory}>
@@ -12,6 +13,7 @@ ReactDOM.render((
       <Route path='/benisdumb' component={Admin}></Route>
       <Route path='/universities/:uniName/:faculty' component={Universities}></Route>
       <Route path='/about-us' component={About}></Route>
+      <Route path='/fee-calculator' component={FeeCalculator}></Route>
       
      
       

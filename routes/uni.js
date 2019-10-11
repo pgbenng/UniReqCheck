@@ -92,7 +92,31 @@ router.get('/req', (req, res, next)=>{
     })
 })
 
+router.get('/getAllUnis', (req, res, next)=> {
+    models.University.findAll({
 
+    })
+    .then(result=> {
+        res.send(result)
+    })
+})
+
+
+router.get('/getFacultiesOfUni', (req, res, next) => {
+    console.log(req.query.uniSelected)
+    models.Faculty.findAll({
+        include: {
+            model: models.University,
+            where: {
+                name: req.query.uniSelected
+            }
+        }
+    })
+    .then(result => {
+        console.log(result);
+        res.send(result)
+    })
+})
 
 
 module.exports = router;

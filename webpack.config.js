@@ -25,6 +25,9 @@ var config = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  node: {
+    fs: "empty"
+ },
   module: {
     loaders: [{
       test: /\.jsx$/,

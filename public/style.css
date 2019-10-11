@@ -61,3 +61,18 @@ p {
     margin-top: 10px
     
 }
+
+#feecalcbody{
+    text-align: center;
+    
+}
+
+#feecalctitle {
+    font-family: 'Lora', serif;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+#feecalcblurb {
+    font-family: Helvetica, sans-serif;
+}

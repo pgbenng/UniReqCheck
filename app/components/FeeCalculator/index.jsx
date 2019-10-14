@@ -18,17 +18,18 @@ export default class FeeCalculator extends React.Component {
         allUniversities: res.data
       });
     });
-    
-    axios.get("/uni/getFacultiesOfUni", {
+
+    axios
+      .get("/uni/getFacultiesOfUni", {
         params: {
-            uniSelected: this.state.uniSelected
+          uniSelected: this.state.uniSelected
         }
-    })
-    .then(res=> {
+      })
+      .then(res => {
         this.setState({
-            allFacultiesOfUniSelected: res.data
-        })
-    })
+          allFacultiesOfUniSelected: res.data
+        });
+      });
   }
 
   handleUniSelected(e) {
@@ -38,16 +39,17 @@ export default class FeeCalculator extends React.Component {
       uniSelected: e.target.value
     });
 
-    axios.get("/uni/getFacultiesOfUni", {
+    axios
+      .get("/uni/getFacultiesOfUni", {
         params: {
-            uniSelected: e.target.value
+          uniSelected: e.target.value
         }
-    })
-    .then(res=> {
+      })
+      .then(res => {
         this.setState({
-            allFacultiesOfUniSelected: res.data
-        })
-    })
+          allFacultiesOfUniSelected: res.data
+        });
+      });
   }
 
   render() {
@@ -74,12 +76,10 @@ export default class FeeCalculator extends React.Component {
           <div className="col-md-12">
             <p> Select your desired university: </p>
             <select onChange={this.handleUniSelected.bind(this)}>
-                <option selected="selected"> Select one</option>
+              <option selected="selected"> Select one</option>
               {this.state.allUniversities.map(x => {
                 return <option> {x.name}</option>;
               })}
-
-              
             </select>
           </div>
         </div>
@@ -88,12 +88,9 @@ export default class FeeCalculator extends React.Component {
           <div classNAme="col-md-12">
             <p> Select the program you plan to study:</p>
             <select>
-                {this.state.allFacultiesOfUniSelected.map(x=>{
-                    return(
-                        <option> {x.name}</option>
-                    )
-                })}
-            
+              {this.state.allFacultiesOfUniSelected.map(x => {
+                return <option> {x.name}</option>;
+              })}
             </select>
           </div>
         </div>

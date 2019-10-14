@@ -20,4 +20,8 @@ router.get('/about-us',(req, res, next) =>{
 router.get('/fee-calculator', (req, res, next) => {
     res.render('index')
 })
+
+router.get('/universities/:uniName', (req, res, next) => {
+    res.render('index')
+})
 module.exports = router;

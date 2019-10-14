@@ -103,7 +103,7 @@ router.get('/getAllUnis', (req, res, next)=> {
 
 
 router.get('/getFacultiesOfUni', (req, res, next) => {
-    console.log(req.query.uniSelected)
+    
     models.Faculty.findAll({
         include: {
             model: models.University,
@@ -113,10 +113,8 @@ router.get('/getFacultiesOfUni', (req, res, next) => {
         }
     })
     .then(result => {
-        console.log(result);
         res.send(result)
     })
 })
-
 
 module.exports = router;

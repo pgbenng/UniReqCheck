@@ -6,6 +6,7 @@ import Admin from './Admin/index.jsx'
 import Universities from './Universities/index.jsx'
 import About from './About/index.jsx'
 import FeeCalculator from './FeeCalculator/index.jsx'
+import UniversitiesHome from './UniversitiesHome/index.jsx'
 
 ReactDOM.render((
     <Router history={browserHistory}>
@@ -14,6 +15,7 @@ ReactDOM.render((
       <Route path='/universities/:uniName/:faculty' component={Universities}></Route>
       <Route path='/about-us' component={About}></Route>
       <Route path='/fee-calculator' component={FeeCalculator}></Route>
+      <Route path='/universities/:uniName' component={UniversitiesHome}></Route>
       
      
       

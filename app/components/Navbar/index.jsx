@@ -61,8 +61,8 @@ export default class Navbar extends React.Component {
                    console.log(x);
                     return (
                       <div className="dropdown-submenu">
-                      <a style={{color:this.props.textcolor}}>{x.name}</a>
-                      <div className="dropdown-menu">
+                      <a style={{color:this.props.textcolor}} href= {"universities/" + x.name} >{x.name}</a>
+                      {/* <div className="dropdown-menu">
                         <div>
                           {x.Faculties.map(y=>{
                             return(
@@ -74,7 +74,7 @@ export default class Navbar extends React.Component {
                             )
                           })}
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     );
                   })}

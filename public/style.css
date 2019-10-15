@@ -76,3 +76,10 @@ p {
 #feecalcblurb {
     font-family: Helvetica, sans-serif;
 }
+
+#unihometitle {
+    font-family: 'Lora', serif;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 20px;
+}

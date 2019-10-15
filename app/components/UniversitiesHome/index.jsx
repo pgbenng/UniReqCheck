@@ -32,7 +32,7 @@ export default class UniversitiesHome extends React.Component {
     return (
         
       <div>
-        <h1>List of faculties</h1> 
+        <h1 id="unihometitle">List of faculties</h1> 
         <ul>
           {this.state.allFaculties.map(x => {
             console.log(x)

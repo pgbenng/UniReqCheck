@@ -71,7 +71,7 @@ export default class Navbar extends React.Component {
                                 {y.name}
                               </a>
                               </div>
-                            )
+                            ) 
                           })}
                         </div>
                       </div> */}

@@ -94,6 +94,8 @@ export default class FeeCalculator extends React.Component {
             </select>
           </div>
         </div>
+
+        
       </div>
     );
   }

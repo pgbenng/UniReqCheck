@@ -6,6 +6,7 @@ router.post('/req', (req, res, next) => {
     const uni = req.body.uniName
     const requirement = req.body.req 
     const faculty = req.body.faculty
+    
 
     console.log(uni, requirement, faculty)
 
@@ -27,6 +28,8 @@ router.post('/req', (req, res, next) => {
     })
 
 })
+
+
 
 router.post('/about-us-submit', (req, res, next) => {
     const bodyText = req.body.aboutBody;

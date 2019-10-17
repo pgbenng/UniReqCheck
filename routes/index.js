@@ -26,4 +26,5 @@ router.get('/universities/:uniName', (req, res, next) => {
 })
 
 
+
 module.exports = router;

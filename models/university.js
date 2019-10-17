@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   University.associate = function(models) {
     // associations can be defined here
     University.hasMany(models.Faculty,{foreignKey:"uniId"})
+    University.hasOne(models.UniInfo, {foreignKey:"uniId"})
   };
   return University;
 };

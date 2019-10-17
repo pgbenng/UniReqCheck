@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   UniInfo.associate = function(models) {
     // associations can be defined here
+    UniInfo.belongsTo(models.University,{foreignKey:'uniId'})
   };
   return UniInfo;
 };

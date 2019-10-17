@@ -34,7 +34,7 @@ export default class Universities extends React.Component {
         <Navbar backgroundcolor="black" textcolor="white" />
         <div id="reqbody" className="row">
           <div className="col-md-12">
-            <ReactMarkdown source={this.state.req} />
+            <ReactMarkdown source={this.state.req} escapeHtml={false} />
           </div>
         </div>
       </div>

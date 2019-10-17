@@ -41,8 +41,9 @@ export default class UniversitiesHome extends React.Component {
   render() {
     return (
       <div>
-        <div id="uniinfo"><ReactMarkdown source={this.state.info}/></div>
+        <div id="uniinfo"><ReactMarkdown source={this.state.info}  escapeHtml={false}/></div>
         <h1 id="unihometitle">List of faculties</h1>
+
         <ul>
           {this.state.allFaculties.map(x => {
             console.log(x);

@@ -36,9 +36,11 @@ h1 {
   margin-bottom: 20px;
   font-family: "Lora", serif;
   margin-top: 30px;
-  margin-left: 20px;
+  
 }
-
+#uniinfo {
+    margin-left: 20px;
+}
 li {
   margin-right: 35px;
   margin-bottom: 5px;

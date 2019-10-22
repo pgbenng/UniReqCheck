@@ -65,8 +65,8 @@ export default class Home extends React.Component {
             </p3>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-12">{this.state.aboutUsBody}</div>
+        <div className="row aboutus">
+          {this.state.aboutUsBody}
         </div>
       </div>
     );
